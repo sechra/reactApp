@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import Calc from './Calc.js';
 
 class App extends React.Component {
 
@@ -66,6 +67,7 @@ render() {
 
 
   return (
+    <div className='rate'>
 <h3>Kurs valut na {this.state.date}</h3>
 {Object.keys(this.state.currencyRate).map((keyName, i) =>
   (
@@ -76,7 +78,11 @@ render() {
     <div className='currency-out'>1200 Kr</div>
 
     </div>
+
   )
   )}
+  </div>
+  <Calc rate={this.state.currencyRate}
+</div>
   )
 }
